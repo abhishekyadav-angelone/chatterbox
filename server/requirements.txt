@@ -1,0 +1,27 @@
+# Chatterbox TTS Server Dependencies
+
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.18
+
+# Logging
+loguru==0.7.3
+
+# Chatterbox dependencies (from pyproject.toml)
+numpy
+resampy==0.4.3
+librosa
+s3tokenizer
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers
+diffusers
+resemble-perth==1.0.1
+omegaconf
+conformer
+safetensors
+spacy-pkuseg
+pykakasi==2.3.0
+huggingface_hub
+
