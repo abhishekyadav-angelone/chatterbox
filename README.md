@@ -87,6 +87,34 @@ ta.save("test-2.wav", wav, model.sr)
 ```
 See `example_tts.py` and `example_vc.py` for more examples.
 
+# Running the TTS Server
+
+Chatterbox includes a FastAPI-based REST API server for production deployments. The server supports speaker cloning, LRU caching, and both English and Multilingual models.
+
+```bash
+# Navigate to the server directory
+cd chatterbox/server
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install Chatterbox from parent directory
+pip install -e ../
+
+# Run the server
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+Or run directly with Python:
+```bash
+cd chatterbox/server
+python main.py
+```
+
+The server will be available at `http://localhost:8000`. Visit the root URL to see the interactive API docs.
+
+For Docker deployment and full API documentation, see [server/README.md](./server/README.md).
+
 # Acknowledgements
 - [Cosyvoice](https://github.com/FunAudioLLM/CosyVoice)
 - [Real-Time-Voice-Cloning](https://github.com/CorentinJ/Real-Time-Voice-Cloning)
